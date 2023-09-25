@@ -1,3 +1,4 @@
+//the algorithm itself, generates an array of routes in the order to visit
 public class FlightPlanGenerator {
     private Route[] routes;
     private Route[] finalRoutes;
