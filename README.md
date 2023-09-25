@@ -3,16 +3,14 @@
 
 ### Graph ADT: (non directed)
 
-- Each node will contain coordinates, 
-and be connected to every single other node  
-- Adjacency list to represent connections, will start of
-as a huge list but will increase in efficiency as we visit points
-(since we don't want to visit that point again we can remove its edge)  
--compute distance between two given points
+- Build a graph adt with the given paths
+- make the graphs weighted by a ratio between passengers and distance to find best next point
 
-### Shortest Path:
-- find shortest next waypoint  
-- if diversion rerun and find new waypoint
+### Algorithm:
+- Build graph ADT, insert existant paths and current node  
+- calculate ratio
+- travel to the best choice from current location
+- using recursion, repeat above steps with the new node being the current location and the old path removed
 
 ### file format
 - first coordinate in the file is the start point
