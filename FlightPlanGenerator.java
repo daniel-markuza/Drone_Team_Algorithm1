@@ -3,6 +3,7 @@ public class FlightPlanGenerator {
     private Route[] finalRoutes;
     private Coordinate currPos;
 
+    //constructor, initilize an array to store the solved path and make start location current pos
     public FlightPlanGenerator(Route[] routes, Coordinate droneStart) {
         this.routes = routes;
         finalRoutes = new Route[routes.length];
@@ -26,7 +27,7 @@ public class FlightPlanGenerator {
                 }
             }
 
-            //store the route at top (we sorted it by ratio in map) in the array
+            //store the route at top (we sorted it by ratio in object Map) in the array
             finalRoutes[currIndex] = currMapState.nextVisit();
 
             //clear out the route array from visited routes
