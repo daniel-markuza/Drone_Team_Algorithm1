@@ -13,13 +13,16 @@ public class Route {
 
         compRouteDistance();
     }
-    
+
+    //distance equation to find the distance between our two points (route length)
     private void compRouteDistance() {
         distance = Math.pow(end.getX() - start.getX(), 2);
         distance += Math.pow(end.getY() - start.getY(), 2);
         distance = Math.sqrt(distance);
     }
 
+    //Find how far the current location is from the start of this route (how long the drone
+    //would actually be travelling to even begin this route)
     public double compDistanceToStart(Coordinate curr) {
         double distance = 0;
 
@@ -30,10 +33,13 @@ public class Route {
         return distance;
     }
 
+    //ratio we use to compare routes, higher number the better
     public double getRatio() {
         return value/distance;
     }
 
+    //getters and setters
+    
     public void setValue(double value) {
         this.value = value;
     }
