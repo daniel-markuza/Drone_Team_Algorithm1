@@ -1,5 +1,5 @@
 public class Map {
-    /* Map holds a linked list of routes sorted by closest to furthest from the start point */
+    //Map holds a linked list of routes sorted by closest to furthest from the start point
     private class RouteNode{
         private Route route;
         private RouteNode next;
